@@ -82,7 +82,7 @@ order by higest_infections_rate desc;
 SELECT
     location,
     population,
-   cast( MAX(total_deaths) as int) as HighestDeathCount,
+    cast( MAX(total_deaths) as int) as HighestDeathCount,
     max(cast(total_deaths as int)/population)*100 as higest_infections_rate
 FROM
     SQL_Portfolio_Projekt..CovidDeaths$
