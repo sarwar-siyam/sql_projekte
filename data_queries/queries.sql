@@ -83,13 +83,13 @@ SELECT
     location,
     population,
     cast( MAX(total_deaths) as int) as HighestDeathCount,
-    max(cast(total_deaths as int)/population)*100 as higest_infections_rate
+    max(cast(total_deaths as int)/population)*100 as higest_death_rate
 FROM
     SQL_Portfolio_Projekt..CovidDeaths$
 --WHERE [location] like 'germany'
 GROUP BY
     location,population
-order by higest_infections_rate desc;
+order by higest_death_rate desc;
 
 
 -- Showing contintents with the highest death count per population
